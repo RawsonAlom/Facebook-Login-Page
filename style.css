@@ -45,16 +45,21 @@ section .login-box .inputs{
     text-align: center;
 }
 section .login-box .inputs input{
-    width: 335px;
+    width: 330px;
     height: 27px;
     margin: 7px;
     border-radius: 5px;
-    border: none;
-    outline: 1px solid rgb(175, 177, 178);
+    border: 2px solid transparent; /* Transparent border initially */
+    outline: 1px solid rgb(200, 202, 210);
     font-family: Arial, sans-serif;
     font-size: 16px;
     padding: 12px;
     color: rgb(48, 48, 49);
+}
+/* Focus effect for the input fields */
+section .login-box .inputs input:focus {
+    border: 2px solid #007bff; /* Add a colored border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Optional shadow */
 }
 section .login-box .inputs button{
     width: 360px;
@@ -115,13 +120,17 @@ footer .hhh{
 footer .text1{
     display: flex;
     list-style: none;
-    font-size: 13px;
+    font-size: 12px;
     flex-wrap: wrap;
     color: #bdc1c5;
 }
 footer .text1 li{
-    padding: 10px;
+    padding: 8px;
     border-bottom: 1px solid;
+}
+footer .text1 li span{
+    color: #686a6c;
+    font-weight: bold;
 }
 footer .text1 li a{
     text-decoration: none;
@@ -141,11 +150,11 @@ footer .text1 button{
 footer .text2{
     display: flex;
     list-style: none;
-    font-size: 13px;
+    font-size: 12px;
     flex-wrap: wrap;
 }
 footer .text2 li{
-    padding: 10px;
+    padding: 8px;
 }
 footer .text2 li a{
     text-decoration: none;
@@ -158,5 +167,32 @@ footer .text2 li a:hover{
 footer .logo{
     width: 200px;
     height: 60px;
-    margin-left: -60%;
+    margin-left: -70%;
+    color: #414344;
+}
+
+@media  screen and (min-width: 200px) and (max-width: 440px) {
+    section .login-box{
+        width: 90%;
+        height: 60%;
+    }
+    section .login-box .inputs input{
+        width: 86%;
+        height: 10%;
+    }
+    section .login-box .inputs button{
+        width: 300px;
+    }
+    section .login-box .text a{
+        font-size: 12px;
+    }
+    footer .text1 {
+        font-size: 10px;
+        font-weight: bold;
+        margin-top: 50px
+    }
+    footer .text2 {
+        font-size: 10px;
+        font-weight: bold;
+    }
 }
